@@ -1,19 +1,60 @@
 {
-  "posts": [
+  "juegos": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "nombreJuego": "The Legend of Zelda™: Tears of the Kingdom ",
+      "precio": 13500,
+      "categoria": "Aventura Acción Juego de rol",
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000063714/2ac2500b2aae03a57bfe8cc4b41a1225305f043f9346f1bf0c4b6e78d81efebb",
+      "descripcion": "Una épica aventura a través de la superficie y los cielos de Hyrule te espera en The Legend of Zelda™: Tears of the Kingdom, disponible exclusivamente para la consola Nintendo Switch™. En esta secuela del juego The Legend of Zelda: Breath of the Wild, decidirás tu propio camino a través de los extensos paisajes de Hyrule y las islas que flotan en los vastos cielos. ¿Podrás aprovechar el poder de las nuevas habilidades de Link para luchar contra las malévolas fuerzas que amenazan al reino?",
+      "descripcionCorta": "Explora la vasta superficie y los cielos de Hyrule",
+      "lanzamiento": "12 de mayo de 2023",
+      "numeroJugadores": "una sola consola (1)",
+      "desarrollador": "Nintendo",
+      "clasificacion": "Todos +10",
+      "modosCompatibles": "Modo televisor, modo semiportátil, Modo portátil",
+      "tamArchivo": "16.3 GB",
+      "idiomasCompatibles": "Alemán, Chino (simplificado), Chino (tradicional), Coreano, Español, Francés, Holandés, Inglés, Italiano, Japonés, Portugués, Ruso"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "nombreJuego": "Super Mario Bros U Deluxe",
+      "precio": 12500,
+      "categoria": "Plataformas Acción",
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000006411/73d58198e35bf94be752cf3d9ba0b44dea877cab1487e2cc1b7eeb02157f066f",
+      "descripcion": "¡Únete a Mario, Luigi y a sus amigos en cualquier momento y en cualquier lugar en una divertida aventura para uno o varios jugadores! Disfruta de dos aventuras de desplazamiento lateral con hasta tres amigos* e intenta salvar al Reino Champiñón. Incluye los juegos New Super Mario Bros. U y New Super Luigi U, ¡ambos incluyen a Nabbit y a Toadette como personajes jugables!",
+      "descripcionCorta": "Dos juegos Super Mario Bros. en uno, ¡el doble de diversión!",
+      "lanzamiento": "11 de enero de 2019",
+      "numeroJugadores": "una sola consola (1-4)",
+      "desarrollador": "Nintendo",
+      "clasificacion": "Todos",
+      "modosCompatibles": "Modo televisor, modo semiportátil, Modo portátil",
+      "tamArchivo": "2.5 GB",
+      "idiomasCompatibles": "Alemán, Chino (simplificado), Chino (tradicional), Coreano, Español, Francés, Holandés, Inglés, Italiano, Japonés, Portugués, Ruso"
+    },
+    {
+      "id": 3,
+      "nombreJuego": "Paquete doble de Pokémon™ Scarlet y Pokémon™ Violet",
+      "precio": 23000,
+      "categoria": "Aventura Juego de rol",
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70070000014505/806672da8ad9d463d1f9b5bb1b6ac4afb04cdf2e0b60c46902fbde4afb565839",
+      "descripcion": "Atrapa, combate y entrena Pokémon en la región de Paldea, una vasta tierra llena de lagos, cimas montañosas, páramos, poblaciones pequeñas y grandes ciudades. Explora un mundo completamente abierto a tu propio paso y recorre a través de la tierra, el agua y el aire a lomos del Pokémon legendario Koraidon, que puede cambiar de forma en Pokémon Scarlet, o sobre el Pokémon legendario Miraidon, que puede cambiar de forma en Pokémon Violet. Elige entre Sprigatito, Fuecoco o Quaxly para que sea tu primer compañero Pokémon antes de lanzarte en tu aventura a través de Paldea.",
+      "descripcionCorta": "Bienvenidos al mundo abierto de la región de Paldea",
+      "lanzamiento": "18 de noviembre de 2022",
+      "numeroJugadores": "Una sola consola (1) Inalámbrico local (2-4) En línea (1-4)",
+      "desarrollador": "Nintendo",
+      "clasificacion": "Todos",
+      "modosCompatibles": "Modo televisor, modo semiportátil, Modo portátil",
+      "tamArchivo": "13.6 GB",
+      "idiomasCompatibles": "Alemán, Chino (simplificado), Chino (tradicional), Coreano, Español, Francés, Holandés, Inglés, Italiano, Japonés, Portugués, Ruso"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "usuarios": [
+    {
+      "nombreUsuario": "Admin",
+      "email": "admin@rolling.com",
+      "password": "123456aA",
+      "id": 1
+    }
+  ]
 }
