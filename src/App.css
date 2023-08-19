@@ -20,3 +20,14 @@ body {
   background-size: cover;
   background-position: right;
 }
+
+.fondo-editar {
+  background-image: url(../src/assets/fondo-editar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mario {
+  width: 100px;
+}
