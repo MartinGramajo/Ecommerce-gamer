@@ -1,6 +1,7 @@
 // import { Link } from "react-router-dom";
 
 import { Button, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ItemJuego = ({
   id,
@@ -21,7 +22,9 @@ const ItemJuego = ({
       <td>{categoria}</td>
       <td>{lanzamiento}</td>
       <td>
-        <Button className="btn btn-warning">Editar</Button>
+        <Link className="btn btn-warning" to="/administrador/editar">
+          Editar
+        </Link>
         <Button className="btn btn-danger">Borrar</Button>
       </td>
     </tr>
