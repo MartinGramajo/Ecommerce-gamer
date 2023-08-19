@@ -22,10 +22,16 @@ const ItemJuego = ({
       <td>{categoria}</td>
       <td>{lanzamiento}</td>
       <td>
-        <Link className="btn btn-warning" to="/administrador/editar">
-          Editar
-        </Link>
-        <Button className="btn btn-danger">Borrar</Button>
+        <div className="py-4">
+          <Link className="btn btn-warning px-5" to="/administrador/editar">
+            Editar
+          </Link>
+        </div>
+        <div className="py-4">
+          <Link className="btn btn-danger px-5" to="/administrador/editar">
+            Borrar
+          </Link>
+        </div>
       </td>
     </tr>
   );
