@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.honguito-agregar {
+  width: 100px;
+  height: 100px;
+}
+
+.fondo-administrar {
+  background-image: url(../src/assets/fondo-administrador.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fondo-crear {
+  background-image: url(../src/assets/fondo-crear.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.fondo-editar {
+  background-image: url(../src/assets/fondo-editar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mario {
+  width: 100px;
+}

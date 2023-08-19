@@ -6,6 +6,8 @@ import DetalleProducto from "./components/views/DetalleProducto";
 import Administrador from "./components/views/Administrador";
 import Login from "./components/views/Login";
 import Nosotros from "./components/views/Nosotros";
+import CrearJuego from "./components/views/CrearJuego";
+import EditarJuego from "./components/views/EditarJuego";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route exact path="/" element={<Inicio />} />
           <Route exact path="/detalle" element={<DetalleProducto />} />
           <Route exact path="/administrador" element={<Administrador />} />
+          <Route exact path="/administrador/crear" element={<CrearJuego />} />
+          <Route exact path="/administrador/editar" element={<EditarJuego />} />
           <Route exact path="/nosotros" element={<Nosotros />} />
           <Route exact path="/login" element={<Login />} />
         </Routes>

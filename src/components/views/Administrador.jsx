@@ -1,8 +1,10 @@
-import { Button, Table } from "react-bootstrap";
+import { Image, Table } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { listarJuego } from "../../helpers/queries";
 import Swal from "sweetalert2";
 import ItemJuego from "../ItemJuego";
+import { Link } from "react-router-dom";
+import marioSaltando from "../../assets/mario-saltando.png";
 
 const Administrador = () => {
   const [juegos, setJuegos] = useState([]);
@@ -19,13 +21,20 @@ const Administrador = () => {
   }, []);
 
   return (
-    <section className="container mainSection">
-      <div className="d-flex justify-content-between align-items-center mt-5">
-        <h1 className="display-4 ">Juegos disponibles</h1>
-        <Button className="btn btn-primary">Agregar</Button>
+    <section className="container-fluid fondo-administrar">
+      <div className="d-flex justify-content-between align-items-center ">
+        <h1 className="display-4 text-center text-white">Juegos disponibles</h1>
+        <Link className="btn btn-success mt-3" to="/administrador/crear">
+          <Image
+            className="honguito-agregar"
+            src={marioSaltando}
+            alt="Mario bros"
+          />
+          Agregar
+        </Link>
       </div>
       <hr />
-      <Table responsive striped bordered hover>
+      <Table responsive striped bordered hover variant="dark">
         <thead>
           <tr>
             <th>Cod</th>
