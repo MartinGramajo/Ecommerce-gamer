@@ -1,6 +1,7 @@
 import { Form, Button, Image } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import up from "../../assets/1up.png";
+import marioSaltando from "../../assets/mario-saltando.png";
 
 const CrearJuego = () => {
   const {
@@ -22,7 +23,7 @@ const CrearJuego = () => {
         <h1 className="display-6 my-4 ms-4">Nuevo Juego</h1>
       </div>
       <hr />
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form className="container" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
           <Form.Label className="h3">Nombre del Juego</Form.Label>
           <Form.Control
@@ -107,7 +108,7 @@ const CrearJuego = () => {
         <Form.Group className="mb-3" controlId="formPrecio">
           <Form.Label className="h3">Descripción*</Form.Label>
           <Form.Control
-            className="py-5"
+            as="textarea"
             type="text"
             placeholder="Ingresar una descripción del juego"
             {...register("descripcion", {
@@ -127,11 +128,9 @@ const CrearJuego = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label className="h3">
-            Descripción corta (para la card del home)*
-          </Form.Label>
+          <Form.Label className="h3">Descripción corta*</Form.Label>
           <Form.Control
-            className="py-5"
+            as="textarea"
             type="text"
             placeholder="Ingresar una descripción breve del juego"
             {...register("descripcionCorta", {
@@ -252,9 +251,16 @@ const CrearJuego = () => {
             </Form.Text>
           </Form.Group>
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Guardar
-        </Button>
+        <div className="d-flex justify-content-center">
+          <Button variant="success" type="submit">
+            <Image
+              className="honguito-agregar"
+              src={marioSaltando}
+              alt="Mario bros"
+            />
+            Guardar
+          </Button>
+        </div>
       </Form>
     </section>
   );
