@@ -1,8 +1,10 @@
+import React from "react";
+
 const Footer = () => {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
+    <footer className="blockquote-footer bg-dark py-4 text-center">
+      <p>&copy; Todos los derechos reservados</p>
+    </footer>
   );
 };
 
