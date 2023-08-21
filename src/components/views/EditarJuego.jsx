@@ -23,7 +23,7 @@ const EditarJuego = () => {
         <h1 className="display-6 my-4 ms-4">Editar juego</h1>
       </div>
       <hr />
-      <Form className="container" onSubmit={handleSubmit(onSubmit)}>
+      <Form className="container py-5" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
           <Form.Label className="h3">Nombre del Juego</Form.Label>
           <Form.Control

@@ -21,8 +21,8 @@ const CrearJuego = () => {
       .then((resp) => {
         if (resp.status === 201) {
           Swal.fire(
-            "Producto Guardado",
-            "Se cargo exitosamente su producto",
+            "Juego Guardado",
+            "Se cargo exitosamente su Juego",
             "success"
           );
         }
@@ -33,7 +33,7 @@ const CrearJuego = () => {
         console.log(error);
         Swal.fire(
           "Hubo un Error",
-          "error al intentar cargar el prouducto",
+          "error al intentar cargar el juego",
           `error`
         );
       });
@@ -46,7 +46,7 @@ const CrearJuego = () => {
         <h1 className="display-6 my-4 ms-4">Nuevo Juego</h1>
       </div>
       <hr />
-      <Form className="container" onSubmit={handleSubmit(onSubmit)}>
+      <Form className="container py-4" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
           <Form.Label className="h3">Nombre del Juego</Form.Label>
           <Form.Control

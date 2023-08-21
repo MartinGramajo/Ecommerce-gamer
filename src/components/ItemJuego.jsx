@@ -1,6 +1,4 @@
-// import { Link } from "react-router-dom";
-
-import { Button, Image } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const ItemJuego = ({
