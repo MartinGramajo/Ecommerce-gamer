@@ -21,7 +21,10 @@ const ItemJuego = ({
       <td>{lanzamiento}</td>
       <td>
         <div className="py-4">
-          <Link className="btn btn-warning px-5" to="/administrador/editar">
+          <Link
+            className="btn btn-warning px-5"
+            to={`/administrador/editar/${id}`}
+          >
             Editar
           </Link>
         </div>
