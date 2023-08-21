@@ -17,7 +17,7 @@ const ItemJuego = ({
       <td>{nombreJuego}</td>
       <td>$ {precio}</td>
       <td className="text-center">
-        <Image className="w-50" src={imagen} alt={nombreJuego} />
+        <Image className="imagen-juego-tabla" src={imagen} alt={nombreJuego} />
       </td>
       <td>{categoria}</td>
       <td>{lanzamiento}</td>
