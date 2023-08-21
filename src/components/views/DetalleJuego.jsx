@@ -31,7 +31,6 @@ const DetalleJuego = () => {
     descripcion,
     lanzamiento,
     numeroJugadores,
-    desarrollador,
     clasificacion,
     modosCompatibles,
     idiomasCompatibles,
@@ -57,7 +56,7 @@ const DetalleJuego = () => {
         <div className="col-12 col-lg-6 text-black d-flex justify-content-start">
           <div>
             <h3>{nombreJuego}</h3>
-            <h6>{desarrollador}</h6>
+            <h6>Nintendo</h6>
             <div className="border-item text-black my-4">
               <div className="py-2">
                 <h6>Version Digital</h6>
@@ -183,7 +182,7 @@ const DetalleJuego = () => {
             <FontAwesomeIcon icon={faPenToSquare} />
             <span> Editor</span>
           </div>
-          <div className="col-12 col-md-6 ">{desarrollador}</div>
+          <div className="col-12 col-md-6 ">Nintendo</div>
         </div>
         <div className="row bg-white py-2  border-item  text-black">
           <div className="col-12 col-md-6">
