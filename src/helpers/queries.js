@@ -12,3 +12,19 @@ export const listarJuego = async () => {
     console.log(error);
   }
 }
+
+export const crearJuego = async (juego) => {
+  try {
+    const resp = await fetch(uriJuego, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(juego)
+    })
+    return resp
+  } catch (error) {
+    console.log(error);
+  }
+
+}

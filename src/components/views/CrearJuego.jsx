@@ -2,8 +2,13 @@ import { Form, Button, Image } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import up from "../../assets/1up.png";
 import marioSaltando from "../../assets/mario-saltando.png";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import { crearJuego } from "../../helpers/queries";
 
 const CrearJuego = () => {
+  const navegacion = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -12,8 +17,26 @@ const CrearJuego = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("aqui agrego mi logica");
-    console.log(data);
+    crearJuego(data)
+      .then((resp) => {
+        if (resp.status === 201) {
+          Swal.fire(
+            "Producto Guardado",
+            "Se cargo exitosamente su producto",
+            "success"
+          );
+        }
+        reset();
+        navegacion("/administrador");
+      })
+      .catch((error) => {
+        console.log(error);
+        Swal.fire(
+          "Hubo un Error",
+          "error al intentar cargar el prouducto",
+          `error`
+        );
+      });
   };
 
   return (

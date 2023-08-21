@@ -44,6 +44,20 @@
       "clasificacion": "Todos",
       "modosCompatibles": "Modo televisor, modo semiportátil, Modo portátil",
       "idiomasCompatibles": "Alemán, Chino (simplificado), Chino (tradicional), Coreano, Español, Francés, Holandés, Inglés, Italiano, Japonés, Portugués, Ruso"
+    },
+    {
+      "nombreJuego": "Pikmin",
+      "precio": "20000",
+      "categoria": "Aventura",
+      "imagen": "https://nextgames.com.ar/img/Public/1040-producto-pikmin-4-eur-7110.jpg",
+      "descripcion": "juego de estrategia ",
+      "descripcionCorta": "adentrate en el misterioso mundo de los pikmin ",
+      "lanzamiento": "20 de agosto del 2023",
+      "numeroJugadores": "1-2 una sola consola",
+      "clasificacion": "Todos +10",
+      "modosCompatibles": "Modo tele , modo portatil",
+      "idiomasCompatibles": "Esp, ing  coreano ",
+      "id": 4
     }
   ],
   "usuarios": [
