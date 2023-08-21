@@ -14,7 +14,7 @@ const MenuReact = () => {
       data-bs-theme="dark"
     >
       <Container>
-        <Navbar.Brand as={Link}>
+        <Navbar.Brand as={Link} to="/">
           <Image className="logo-intendo" fluid src={logo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
