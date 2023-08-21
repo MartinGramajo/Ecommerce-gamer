@@ -33,6 +33,11 @@ const ItemJuego = ({
             Borrar
           </Link>
         </div>
+        <div className="py-4">
+          <Link className="btn btn-info px-5" to={`/detalle/${id}`}>
+            detalles
+          </Link>
+        </div>
       </td>
     </tr>
   );

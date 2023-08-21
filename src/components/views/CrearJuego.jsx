@@ -40,7 +40,7 @@ const CrearJuego = () => {
   };
 
   return (
-    <section className="fondo-crear text-white">
+    <section className="container-fluid fondo-crear text-white">
       <div className="d-flex py-4">
         <Image className="honguito-agregar" src={up} alt="Honguito Verde" />
         <h1 className="display-6 my-4 ms-4">Nuevo Juego</h1>

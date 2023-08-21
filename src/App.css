@@ -28,10 +28,40 @@ body {
   background-position: center;
 }
 
+.fondo-detalle {
+  background-image: url(../src/assets/fondo-detalle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .mario {
   width: 100px;
 }
 
 .imagen-juego-tabla {
   width: 300px;
+}
+
+.border-item {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+
+.moneda {
+  width: 60px;
+}
+
+.btn-descarga {
+  width: 500px;
+  background-color: rgb(230, 0, 18) !important;
+  border-color: rgb(230, 0, 18) !important;
+}
+
+@media screen and (max-width: 500px) {
+  .btn-descarga {
+    width: 300px;
+    background-color: rgb(230, 0, 18) !important;
+    border-color: rgb(230, 0, 18) !important;
+  }
 }

@@ -64,7 +64,7 @@ const EditarJuego = () => {
   };
 
   return (
-    <section className=" fondo-editar text-white">
+    <section className="container-fluid fondo-editar text-white">
       <div className="d-flex py-4">
         <Image className="mario" src={mario} alt="Super Mario constructor" />
         <h1 className="display-6 my-4 ms-4">Editar juego</h1>

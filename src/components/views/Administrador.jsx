@@ -8,8 +8,6 @@ import marioSaltando from "../../assets/mario-saltando.png";
 
 const Administrador = () => {
   const [juegos, setJuegos] = useState([]);
-  console.log("file: Administrador.jsx:9 ~ Administrador ~ juegos:", juegos);
-
   useEffect(() => {
     listarJuego().then((respuestaJuegos) => {
       if (respuestaJuegos) {
