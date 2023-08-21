@@ -2,8 +2,15 @@ import { Form, Button, Image } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import mario from "../../assets/mario-constructor.png";
 import marioConstructor from "../../assets/mario-constructor-ok.png";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { editarJuego, obtenerJuego } from "../../helpers/queries";
+import Swal from "sweetalert2";
 
 const EditarJuego = () => {
+  const { id } = useParams();
+  const navegacion = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -11,19 +18,59 @@ const EditarJuego = () => {
     setValue,
   } = useForm();
 
+  useEffect(() => {
+    obtenerJuego(id)
+      .then((resp) => {
+        if (resp) {
+          setValue("nombreJuego", resp.nombreJuego);
+          setValue("precio", resp.precio);
+          setValue("categoria", resp.categoria);
+          setValue("imagen", resp.imagen);
+          setValue("descripcion", resp.descripcion);
+          setValue("descripcionCorta", resp.descripcionCorta);
+          setValue("lanzamiento", resp.lanzamiento);
+          setValue("numeroJugadores", resp.numeroJugadores);
+          setValue("desarrollador", resp.desarrollador);
+          setValue("clasificacion", resp.clasificacion);
+          setValue("modosCompatibles", resp.modosCompatibles);
+          setValue("idiomasCompatibles", resp.idiomasCompatibles);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   const onSubmit = (data) => {
-    console.log("aqui agrego mi logica");
-    console.log(data);
+    editarJuego(id, data)
+      .then((resp) => {
+        if (resp.status === 200) {
+          Swal.fire(
+            "Juego Editado",
+            "Se edito exitosamente su Juego",
+            "success"
+          );
+        }
+        navegacion("/administrador");
+      })
+      .catch((error) => {
+        console.log(error);
+        Swal.fire(
+          "Hubo un Error",
+          "error al intentar cargar el juego",
+          `error`
+        );
+      });
   };
 
   return (
-    <section className="container mainSection fondo-editar text-white">
+    <section className=" fondo-editar text-white">
       <div className="d-flex py-4">
         <Image className="mario" src={mario} alt="Super Mario constructor" />
         <h1 className="display-6 my-4 ms-4">Editar juego</h1>
       </div>
       <hr />
-      <Form className="container" onSubmit={handleSubmit(onSubmit)}>
+      <Form className="container py-5" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
           <Form.Label className="h3">Nombre del Juego</Form.Label>
           <Form.Control
@@ -108,7 +155,7 @@ const EditarJuego = () => {
         <Form.Group className="mb-3" controlId="formPrecio">
           <Form.Label className="h3">Descripción*</Form.Label>
           <Form.Control
-            className="py-5"
+            as="textarea"
             type="text"
             placeholder="Ingresar una descripción del juego"
             {...register("descripcion", {
@@ -130,7 +177,7 @@ const EditarJuego = () => {
         <Form.Group className="mb-3" controlId="formPrecio">
           <Form.Label className="h3">Descripción corta*</Form.Label>
           <Form.Control
-            className="py-5"
+            as="textarea"
             type="text"
             placeholder="Ingresar una descripción breve del juego"
             {...register("descripcionCorta", {

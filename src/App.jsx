@@ -22,7 +22,11 @@ function App() {
           <Route exact path="/detalle" element={<DetalleProducto />} />
           <Route exact path="/administrador" element={<Administrador />} />
           <Route exact path="/administrador/crear" element={<CrearJuego />} />
-          <Route exact path="/administrador/editar" element={<EditarJuego />} />
+          <Route
+            exact
+            path="/administrador/editar/:id"
+            element={<EditarJuego />}
+          />
           <Route exact path="/nosotros" element={<Nosotros />} />
           <Route exact path="/login" element={<Login />} />
           <Route path="*" element={<Error404 />} />
