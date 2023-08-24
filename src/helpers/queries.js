@@ -51,3 +51,13 @@ export const editarJuego = async (id, juegoEditado) => {
   }
 }
 
+export const borrarJuego = async (id) => {
+  try {
+    const respuesta = await fetch(`${uriJuego}/${id}`, {
+      method: "DELETE"
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+}

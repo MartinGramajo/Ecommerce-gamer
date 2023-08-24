@@ -46,7 +46,11 @@ const Administrador = () => {
         </thead>
         <tbody>
           {juegos.map((juego) => (
-            <ItemJuego {...juego} key={juego.id}></ItemJuego>
+            <ItemJuego
+              {...juego}
+              key={juego.id}
+              setJuegos={setJuegos}
+            ></ItemJuego>
           ))}
         </tbody>
       </Table>
