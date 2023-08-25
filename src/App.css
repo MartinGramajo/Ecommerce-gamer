@@ -128,9 +128,9 @@ body {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   padding: 15px;
-  
+
   display: -ms-flexbox;
- 
+
   align-items: center;
   text-align: center;
   color: #f0e9e9;
@@ -154,12 +154,12 @@ body {
   background-repeat: no-repeat;
   width: 300px;
 }
-  .card3 {
-    background-image: url(../src/assets/honguitoMario.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 300px;
+.card3 {
+  background-image: url(../src/assets/honguitoMario.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 300px;
 }
 .card4 {
   background-image: url(../src/assets/monedaMario.png);
@@ -171,9 +171,3 @@ body {
 .imagen-carta {
   width: 100px !important;
 }
-
-
-
-
-
-
