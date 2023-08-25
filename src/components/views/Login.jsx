@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
+
 import Swal from "sweetalert2";
 
 const Login = ({ setUsuarioActivo }) => {
@@ -12,7 +13,6 @@ const Login = ({ setUsuarioActivo }) => {
   } = useForm();
   const onSubmit = (usuario) => {
     login(usuario).then((respuesta) => {
-      console.log(respuesta);
       if (respuesta) {
         Swal.fire(
           "Bienvenido " + respuesta.nombreUsuario,
