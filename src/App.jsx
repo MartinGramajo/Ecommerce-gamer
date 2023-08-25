@@ -14,7 +14,7 @@ import DetalleJuego from "./components/views/DetalleJuego";
 
 function App() {
   return (
-    <>
+    <div className="bg-app d-flex flex-column min-vh-100">
       <BrowserRouter>
         <MenuReact />
         <Routes>
@@ -33,7 +33,7 @@ function App() {
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
