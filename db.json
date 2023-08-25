@@ -44,6 +44,20 @@
       "clasificacion": "Todos",
       "modosCompatibles": "Modo televisor, modo semiportátil, Modo portátil",
       "idiomasCompatibles": "Alemán, Chino (simplificado), Chino (tradicional), Coreano, Español, Francés, Holandés, Inglés, Italiano, Japonés, Portugués, Ruso"
+    },
+    {
+      "nombreJuego": "Pikmin",
+      "precio": "20000",
+      "categoria": "Aventura",
+      "imagen": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Pikmin4_image1600w.jpg",
+      "descripcion": "juego de estrategia ",
+      "descripcionCorta": "adentrate en el misterioso mundo de los pikmin ",
+      "lanzamiento": "20 de agosto del 2023",
+      "numeroJugadores": "1-2 una sola consola",
+      "clasificacion": "Todos +10",
+      "modosCompatibles": "Modo tele , modo portatil",
+      "idiomasCompatibles": "Esp, ing  coreano ",
+      "id": 4
     }
   ],
   "usuarios": [
