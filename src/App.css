@@ -16,9 +16,7 @@ body {
   color: rgb(230, 0, 18);
   content: "";
   opacity: 0;
-  transition:
-    opacity 0.3s ease 0s,
-    transform 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
   transform: translateY(10px);
 }
 .nav-items:hover:after {
@@ -170,4 +168,10 @@ body {
 }
 .imagen-carta {
   width: 100px !important;
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
