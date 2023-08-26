@@ -1,11 +1,31 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import { Image } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
+import Swal from "sweetalert2";
 
-const MenuReact = () => {
+const MenuReact = ({ usuarioActivo, setUsuarioActivo }) => {
+  const navegacion = useNavigate();
+
+  const logout = () => {
+    Swal.fire({
+      title: "SEGURO QUE QUIERES CERRAR SESIÓN?",
+      showDenyButton: true,
+      confirmButtonText: "si",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Sesión cerrada!", "", "success");
+        setUsuarioActivo("");
+        sessionStorage.removeItem("usuarioLogueado");
+        navegacion("/");
+      } else if (result.isDenied) {
+        Swal.fire("Sesión activa!", "", "info");
+      }
+    });
+  };
+
   return (
     <Navbar
       expand="lg"
@@ -26,12 +46,20 @@ const MenuReact = () => {
             <NavLink className="nav-link nav-items" end to="/Nosotros">
               Acerca de nosotros
             </NavLink>
-            <NavLink className="nav-link nav-items" end to="/Administrador">
-              Administrador
-            </NavLink>
-            <NavLink className="nav-link nav-items" end to="/Login">
-              Login
-            </NavLink>
+            {usuarioActivo.email ? (
+              <>
+                <NavLink className="nav-link" end to="/administrador">
+                  Administrador
+                </NavLink>
+                <Button variant="dark" onClick={logout}>
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <NavLink className="nav-link" end to="/login">
+                Login
+              </NavLink>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

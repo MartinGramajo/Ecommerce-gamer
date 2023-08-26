@@ -1,10 +1,11 @@
 const uriJuego = import.meta.env.VITE_API_JUEGO;
+const uriUsuario = import.meta.env.VITE_API_USUARIO
 
 export const login = async (usuario) => {
   try {
-    const respuesta = await fetch("uriUsuario");
+    const respuesta = await fetch(uriUsuario);
     const listaUsuarios = await respuesta.json();
-    const usuarioListado = usuarioListado.find(
+    const usuarioListado = listaUsuarios.find(
       (itemUsuario) => itemUsuario.email === usuario.email
     );
     if (usuarioListado) {
@@ -16,7 +17,9 @@ export const login = async (usuario) => {
     } else {
       return null;
     }
-  } catch (error) {}
+  } catch (error) {
+    console.log("file: queries.js:5 ~ login ~ error:", error)
+  }
 };
 
 //////////////////////////////////////////
