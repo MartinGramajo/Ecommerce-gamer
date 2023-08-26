@@ -1,8 +1,7 @@
-import { Container } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { Container, Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { login } from "../../helpers/queries";
 
 const Login = ({ setUsuarioActivo }) => {
   const {
@@ -10,9 +9,10 @@ const Login = ({ setUsuarioActivo }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (usuario) => {
+    console.log(usuario);
     login(usuario).then((respuesta) => {
-      console.log(respuesta);
       if (respuesta) {
         Swal.fire(
           "Bienvenido " + respuesta.nombreUsuario,
@@ -21,13 +21,14 @@ const Login = ({ setUsuarioActivo }) => {
         );
         sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
         setUsuarioActivo(respuesta);
-      } else
+      } else {
         Swal.fire("Ocurrio un error", "Email o contraseña incorrecto", "error");
+      }
     });
   };
 
   return (
-    <Container>
+    <Container className="mainSection">
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-4" controlId="formBasicEmail">
           <Form.Label className="text-">
