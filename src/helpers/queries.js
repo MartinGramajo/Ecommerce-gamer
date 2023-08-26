@@ -2,7 +2,7 @@ const uriJuego = import.meta.env.VITE_API_JUEGO;
 
 export const login = async (usuario) => {
   try {
-    const respuesta = await fetch("https://localhost:5173/usuarios");
+    const respuesta = await fetch("uriUsuario");
     const listaUsuarios = await respuesta.json();
     const usuarioListado = usuarioListado.find(
       (itemUsuario) => itemUsuario.email === usuario.email
