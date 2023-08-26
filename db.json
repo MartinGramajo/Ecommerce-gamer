@@ -44,6 +44,20 @@
       "clasificacion": "Todos",
       "modosCompatibles": "Modo televisor, modo semiportátil, Modo portátil",
       "idiomasCompatibles": "Alemán, Chino (simplificado), Chino (tradicional), Coreano, Español, Francés, Holandés, Inglés, Italiano, Japonés, Portugués, Ruso"
+    },
+    {
+      "nombreJuego": "EA SPORTS FC 24",
+      "precio": "20000",
+      "categoria": "Deportes",
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_801/b_white/f_auto/q_auto/ncom/software/switch/70010000061749/539404ec5046d9cd9a8543484a6203cfeaa2d8cb4e67d4f854fee50da734b000",
+      "descripcion": "\"EA SPORTS FC™ 24 representa una nueva era para el Juego de Todos: más de 19,000 futbolistas con licencia total, más de 700 equipos y más de 30 ligas en la experiencia futbolística más auténtica jamás creada.",
+      "descripcionCorta": "EA SPORTS FC™ 24 es el siguiente capítulo en un futuro más innovador del futbol.",
+      "lanzamiento": "29 de Septiembre de 2023",
+      "numeroJugadores": "1-8",
+      "clasificacion": "+16",
+      "modosCompatibles": "Modo Televisor",
+      "idiomasCompatibles": "Español",
+      "id": 4
     }
   ],
   "usuarios": [

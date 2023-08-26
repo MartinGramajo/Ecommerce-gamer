@@ -175,3 +175,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
+.card-juegos-nintendo {
+  border-left: 2px solid red;
+}
+.card-juegos-nintendo span {
+  margin-left: 1em;
+}
+
+.home-card-juego {
+  transition: all 0.5s ease;
+}
+.home-card-juego:hover {
+  transform: scale(1.02);
+}
