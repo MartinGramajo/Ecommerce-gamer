@@ -2,6 +2,7 @@ import { Container, Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { login } from "../../helpers/queries";
+import { useNavigate } from "react-router-dom";
 
 const Login = ({ setUsuarioActivo }) => {
   const {
@@ -10,10 +11,13 @@ const Login = ({ setUsuarioActivo }) => {
     formState: { errors },
   } = useForm();
 
+  const navegacion = useNavigate();
+
   const onSubmit = (usuario) => {
     console.log(usuario);
     login(usuario).then((respuesta) => {
-      if (respuesta) {
+      console.log("file: Login.jsx:19 ~ login ~ respuesta:", respuesta);
+      if (respuesta.role === "administrador") {
         Swal.fire(
           "Bienvenido " + respuesta.nombreUsuario,
           "Ingresaste a Intendo",
@@ -21,9 +25,32 @@ const Login = ({ setUsuarioActivo }) => {
         );
         sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
         setUsuarioActivo(respuesta);
+        navegacion("/administrador");
+      } else if (respuesta.role === "usuario") {
+        Swal.fire(
+          "Bienvenido " + respuesta.nombreUsuario,
+          "Ingresaste a Intendo",
+          "success"
+        );
+        sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
+        setUsuarioActivo(respuesta);
+        navegacion("/");
       } else {
         Swal.fire("Ocurrio un error", "Email o contraseña incorrecto", "error");
       }
+
+      // if (respuesta.role === "administrador") {
+      //   Swal.fire(
+      //     "Bienvenido " + respuesta.nombreUsuario,
+      //     "Ingresaste a Intendo",
+      //     "success"
+      //   );
+      //   sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
+      //   setUsuarioActivo(respuesta);
+      //   navegacion("/administrador");
+      // } else {
+      //   Swal.fire("Ocurrio un error", "Email o contraseña incorrecto", "error");
+      // }
     });
   };
 
