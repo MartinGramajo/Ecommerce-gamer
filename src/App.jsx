@@ -3,15 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MenuReact from "./components/common/MenuReact";
 import Inicio from "./components/views/Inicio";
-import Administrador from "./components/views/Administrador";
 import Login from "./components/views/Login";
 import Nosotros from "./components/views/Nosotros";
-import CrearJuego from "./components/views/CrearJuego";
-import EditarJuego from "./components/views/EditarJuego";
 import Error404 from "./components/views/Error404";
 import Footer from "./components/common/Footer";
 import DetalleJuego from "./components/views/DetalleJuego";
 import { useState } from "react";
+import EncapsularRutas from "./components/routes/EncapsularRutas";
+import RutasProtegidas from "./components/routes/RutasProtegidas";
 
 function App() {
   const usuarioEnLinea =
@@ -28,12 +27,13 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Inicio />} />
           <Route exact path="/detalle/:id" element={<DetalleJuego />} />
-          <Route exact path="/administrador" element={<Administrador />} />
-          <Route exact path="/administrador/crear" element={<CrearJuego />} />
           <Route
-            exact
-            path="/administrador/editar/:id"
-            element={<EditarJuego />}
+            path="/administrador/*"
+            element={
+              <EncapsularRutas>
+                <RutasProtegidas />
+              </EncapsularRutas>
+            }
           />
           <Route exact path="/nosotros" element={<Nosotros />} />
           <Route
