@@ -47,7 +47,7 @@ const MenuReact = ({ usuarioActivo, setUsuarioActivo }) => {
             <NavLink className="nav-link nav-items" end to="/Nosotros">
               Acerca de nosotros
             </NavLink>
-            {!usuarioActivo && (
+            {!usuarioActivo.email && (
               <NavLink className="nav-link nav-items" end to="/Login">
                 Login
               </NavLink>
