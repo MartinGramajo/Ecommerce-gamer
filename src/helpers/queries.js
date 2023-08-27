@@ -1,5 +1,5 @@
 const uriJuego = import.meta.env.VITE_API_JUEGO;
-const uriUsuario = import.meta.env.VITE_API_USUARIO
+const uriUsuario = import.meta.env.VITE_API_USUARIO;
 
 export const login = async (usuario) => {
   try {
@@ -18,7 +18,7 @@ export const login = async (usuario) => {
       return null;
     }
   } catch (error) {
-    console.log("file: queries.js:5 ~ login ~ error:", error)
+    console.log(error);
   }
 };
 
