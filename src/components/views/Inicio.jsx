@@ -19,17 +19,21 @@ const Inicio = () => {
 
   return (
     <>
-      <section className="w-100">
-        <img
-          className="img-fluid d-sm-block d-lg-none"
-          src={bannerSm}
-          alt="Banner nintendo"
-        />
-        <img
-          className="img-fluid d-none d-lg-block"
-          src={bannerLg}
-          alt="Banner nintendo"
-        />
+      <section className="w-100 ">
+        <div className="d-flex justify-content-center">
+          <img
+            className="img-fluid d-sm-block d-lg-none"
+            src={bannerSm}
+            alt="Banner nintendo"
+          />
+        </div>
+        <div className="d-flex justify-content-center">
+          <img
+            className="img-fluid d-none d-lg-block"
+            src={bannerLg}
+            alt="Banner nintendo"
+          />
+        </div>
       </section>
       <section>
         <FiltroBusqueda juegos={juegos}></FiltroBusqueda>
