@@ -47,9 +47,11 @@ const MenuReact = ({ usuarioActivo, setUsuarioActivo }) => {
             <NavLink className="nav-link nav-items" end to="/Nosotros">
               Acerca de nosotros
             </NavLink>
-            <NavLink className="nav-link nav-items" end to="/Login">
-              Login
-            </NavLink>{" "}
+            {!usuarioActivo && (
+              <NavLink className="nav-link nav-items" end to="/Login">
+                Login
+              </NavLink>
+            )}
             {usuarioActivo.role === "administrador" && (
               <>
                 <NavLink className="nav-link" end to="/administrador">
@@ -62,12 +64,6 @@ const MenuReact = ({ usuarioActivo, setUsuarioActivo }) => {
             )}
             {usuarioActivo.role === "usuario" && (
               <>
-                <NavLink className="nav-link nav-items" end to={"/"}>
-                  Inicio
-                </NavLink>
-                <NavLink className="nav-link nav-items" end to="/Nosotros">
-                  Acerca de nosotros
-                </NavLink>
                 <Button variant="dark" onClick={logout}>
                   Logout
                 </Button>
