@@ -11,6 +11,7 @@ import DetalleJuego from "./components/views/DetalleJuego";
 import { useState } from "react";
 import EncapsularRutas from "./components/routes/EncapsularRutas";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const usuarioEnLinea =
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="bg-app d-flex flex-column min-vh-100">
       <BrowserRouter>
+        <ScrollToTop />
         <MenuReact
           usuarioActivo={usuarioActivo}
           setUsuarioActivo={setUsuarioActivo}

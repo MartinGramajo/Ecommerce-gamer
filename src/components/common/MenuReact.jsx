@@ -52,7 +52,7 @@ const MenuReact = ({ usuarioActivo, setUsuarioActivo }) => {
                 Login
               </NavLink>
             )}
-            {usuarioActivo.role === "administrador" && (
+            {usuarioActivo?.role === "administrador" && (
               <>
                 <NavLink className="nav-link" end to="/administrador">
                   Administrador
