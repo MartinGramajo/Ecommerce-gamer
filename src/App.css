@@ -188,4 +188,28 @@ body {
 }
 .home-card-juego:hover {
   transform: scale(1.02);
+
+.loginForm {
+  padding: 50px 60px;
+  border-radius: 7px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.bgLogin {
+  background-color: #f1f1f1;
+  }
+  
+.card-juegos-nintendo {
+  border-left: 2px solid red;
+}
+.card-juegos-nintendo span {
+  margin-left: 1em;
+}
+
+.home-card-juego {
+  transition: all 0.5s ease;
+}
+.home-card-juego:hover {
+  transform: scale(1.02)
+
+
