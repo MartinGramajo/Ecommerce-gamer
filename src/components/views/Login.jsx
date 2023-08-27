@@ -2,7 +2,7 @@ import { Container, Button, Form, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { login } from "../../helpers/queries";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = ({ setUsuarioActivo }) => {
   const {
@@ -15,43 +15,32 @@ const Login = ({ setUsuarioActivo }) => {
 
   const onSubmit = (usuario) => {
     console.log(usuario);
-    login(usuario).then((respuesta) => {
-      console.log("file: Login.jsx:19 ~ login ~ respuesta:", respuesta);
-      if (respuesta.role === "administrador") {
-        Swal.fire(
-          "Bienvenido " + respuesta.nombreUsuario,
-          "Ingresaste a Intendo",
-          "success"
-        );
-        sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
-        setUsuarioActivo(respuesta);
-        navegacion("/administrador");
-      } else if (respuesta.role === "usuario") {
-        Swal.fire(
-          "Bienvenido " + respuesta.nombreUsuario,
-          "Ingresaste a Intendo",
-          "success"
-        );
-        sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
-        setUsuarioActivo(respuesta);
-        navegacion("/");
-      } else {
-        Swal.fire("Ocurrio un error", "Email o contraseña incorrecto", "error");
-      }
-
-      // if (respuesta.role === "administrador") {
-      //   Swal.fire(
-      //     "Bienvenido " + respuesta.nombreUsuario,
-      //     "Ingresaste a Intendo",
-      //     "success"
-      //   );
-      //   sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
-      //   setUsuarioActivo(respuesta);
-      //   navegacion("/administrador");
-      // } else {
-      //   Swal.fire("Ocurrio un error", "Email o contraseña incorrecto", "error");
-      // }
-    });
+    login(usuario)
+      .then((respuesta) => {
+        console.log(respuesta);
+        if (respuesta.role === "administrador") {
+          Swal.fire(
+            "Bienvenido " + respuesta.nombreUsuario,
+            "Ingresaste a Intendo",
+            "success"
+          );
+          sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
+          setUsuarioActivo(respuesta);
+          navegacion("/administrador");
+        } else {
+          Swal.fire(
+            "Bienvenido " + respuesta.nombreUsuario,
+            "Ingresaste a Intendo",
+            "success"
+          );
+          sessionStorage.setItem("usuarioLogueado", JSON.stringify(respuesta));
+          setUsuarioActivo(respuesta);
+          navegacion("/");
+        }
+      })
+      .catch((error) => {
+        Swal.fire("Ocurrió un error", "Email o contraseña incorrecto", "error");
+      });
   };
 
   return (
@@ -100,9 +89,11 @@ const Login = ({ setUsuarioActivo }) => {
                 {errors.password?.message}
               </Form.Text>
             </Form.Group>
-            <Button className="mb-2" variant="link">
-              Has olvidado la contraseña?
-            </Button>
+            <Link to={"*"}>
+              <Button className="mb-2" variant="link">
+                Has olvidado la contraseña?
+              </Button>
+            </Link>
             <div></div>
             <Button variant="secondary" type="submit">
               Enviar
