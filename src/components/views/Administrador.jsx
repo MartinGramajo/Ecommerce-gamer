@@ -1,4 +1,4 @@
-import { Image, Table } from "react-bootstrap";
+import { Image, Spinner, Table } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { listarJuego } from "../../helpers/queries";
 import Swal from "sweetalert2";
@@ -8,13 +8,17 @@ import marioSaltando from "../../assets/mario-saltando.png";
 
 const Administrador = () => {
   const [juegos, setJuegos] = useState([]);
+  const [mostrarSpinner, setMostrarSpinner] = useState(true);
+
   useEffect(() => {
+    setMostrarSpinner(true);
     listarJuego().then((respuestaJuegos) => {
       if (respuestaJuegos) {
         setJuegos(respuestaJuegos);
       } else {
         Swal.fire("Ocurrio un error", "Intente de nuevo", "error");
       }
+      setMostrarSpinner(false);
     });
   }, []);
 
@@ -32,28 +36,36 @@ const Administrador = () => {
         </Link>
       </div>
       <hr />
-      <Table responsive striped bordered hover variant="dark">
-        <thead>
-          <tr>
-            <th>Cod</th>
-            <th>Titulo</th>
-            <th>Precio</th>
-            <th>URL de Imagen</th>
-            <th>Categoria</th>
-            <th>Lanzamiento</th>
-            <th>Opciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {juegos.map((juego) => (
-            <ItemJuego
-              {...juego}
-              key={juego.id}
-              setJuegos={setJuegos}
-            ></ItemJuego>
-          ))}
-        </tbody>
-      </Table>
+      {mostrarSpinner ? (
+        <div className="my-5 d-flex justify-content-center">
+          <Spinner className="fs-1" animation="border" variant="dark" />
+        </div>
+      ) : (
+        <>
+          <Table responsive striped bordered hover variant="dark">
+            <thead>
+              <tr>
+                <th>Cod</th>
+                <th>Titulo</th>
+                <th>Precio</th>
+                <th>URL de Imagen</th>
+                <th>Categoria</th>
+                <th>Lanzamiento</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {juegos.map((juego) => (
+                <ItemJuego
+                  {...juego}
+                  key={juego.id}
+                  setJuegos={setJuegos}
+                ></ItemJuego>
+              ))}
+            </tbody>
+          </Table>
+        </>
+      )}
     </section>
   );
 };
