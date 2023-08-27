@@ -40,13 +40,19 @@ const MenuReact = ({ usuarioActivo, setUsuarioActivo }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
+            {" "}
             <NavLink className="nav-link nav-items" end to={"/"}>
               Inicio
             </NavLink>
             <NavLink className="nav-link nav-items" end to="/Nosotros">
               Acerca de nosotros
             </NavLink>
-            {usuarioActivo.email ? (
+            {!usuarioActivo && (
+              <NavLink className="nav-link nav-items" end to="/Login">
+                Login
+              </NavLink>
+            )}
+            {usuarioActivo?.role === "administrador" && (
               <>
                 <NavLink className="nav-link" end to="/administrador">
                   Administrador
@@ -55,10 +61,13 @@ const MenuReact = ({ usuarioActivo, setUsuarioActivo }) => {
                   Logout
                 </Button>
               </>
-            ) : (
-              <NavLink className="nav-link" end to="/login">
-                Login
-              </NavLink>
+            )}
+            {usuarioActivo.role === "usuario" && (
+              <>
+                <Button variant="dark" onClick={logout}>
+                  Logout
+                </Button>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>
