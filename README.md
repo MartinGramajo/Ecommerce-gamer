@@ -9,12 +9,19 @@
 - HTML **v5**
 - CSS **v3**
 - [React](https://es.react.dev/)
-- [Node Js](https://nodejs.org/es)
-- [NPM](https://www.npmjs.com/)
+- [Node Js](https://nodejs.org/es) **v18.17.1**
+- [NPM](https://www.npmjs.com/) **v9.8.1**
 - [React Bootstrap](https://react-bootstrap.github.io/) **v2.9.0-beta.1**
 - [Trello](https://trello.com/b/4h4qvy8X/grupo-4-rcs)
+- [React-Hook-Form] (https://www.react-hook-form.com/) **v5/v6**
+- [Sweetalert2](https://sweetalert2.github.io/) **v11.7.27**
+- [JSON Server](https://www.npmjs.com/package/json-server) **v0.17.3**
+
 
 ## Requirements
+> *IMPORTANT: For the project to work on your PC, *npm i must be done to be able to bring the bootstrap modules and everything necessary to start the project.
+For the project to work on your PC, you must install *JSON server* on your PC with the following command: *npm install -g json-server.*
+In case of having an error due to script execution policy, the following command is executed in the window power shell: *Set-ExecutionPolicy Unrestricted* and with the *Get-ExecutionPolicy* command it allows us to know if I have it enabled.
 
 - [Project requirements](https://drive.google.com/file/d/10pFRMiGUFXSEBanlQbjBNYhrjtpnz66e/view)
 - [Nodejs](https://nodejs.org/en/) **v18.17.1**
