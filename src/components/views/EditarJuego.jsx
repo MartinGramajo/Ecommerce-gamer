@@ -96,7 +96,7 @@ const EditarJuego = () => {
           <Form.Label className="h3">Precio*</Form.Label>
           <Form.Control
             type="number"
-            placeholder="Ej: 10000"
+            placeholder="Ej: 50"
             {...register("precio", {
               required: "El precio es un valor requerido",
               min: {
@@ -174,28 +174,7 @@ const EditarJuego = () => {
             {errors.descripcion?.message}
           </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label className="h3">Descripción corta*</Form.Label>
-          <Form.Control
-            as="textarea"
-            type="text"
-            placeholder="Ingresar una descripción breve del juego"
-            {...register("descripcionCorta", {
-              required: "Este dato es obligatorio",
-              minLength: {
-                value: 4,
-                message: "Debe ingresar como minimo 4 caracteres",
-              },
-              maxLength: {
-                value: 100,
-                message: "Debe ingresar como maximo 100 caracteres",
-              },
-            })}
-          />
-          <Form.Text className="text-danger">
-            {errors.descripcionCorta?.message}
-          </Form.Text>
-        </Form.Group>
+
         <Form.Group className="mb-3" controlId="formPrecio">
           <Form.Label className="h3">Fecha de lanzamiento*</Form.Label>
           <Form.Control

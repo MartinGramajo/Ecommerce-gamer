@@ -58,6 +58,20 @@
       "modosCompatibles": "Modo Televisor",
       "idiomasCompatibles": "Español",
       "id": 4
+    },
+    {
+      "nombreJuego": "Super Mario RPG™",
+      "precio": "11500",
+      "categoria": "Juego de rol Aventura",
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000068683/fe4afe940b0e707798332e86f0af56cdbde48da59dc37cdfb8d59febb88ac72a",
+      "descripcion": "Mario, Bowser y Peach unen fuerzas para reparar la Vía Estelar, un camino que cumple deseos, en este ameno juego de rol\nForma equipo con un grupo inusual de héroes para reparar la Vía Estelar y detener a la revoltosa Banda de Fraguo. Este colorido juego de rol incluye gráficos y escenas cinemáticas actualizados que refuerzan el encanto de la alianza inesperada entre Mario, Bowser y Peach con Mallow y Geno, el par de personajes originales de este juego. Descubre o regresa a este mundo de aliados inusuales y personajes extravagantes en un juego de rol para todos.\n\n¡Recorre un mundo colorido y añade un toque extra a tus ataques durante los combates!",
+      "lanzamiento": "17 de noviembre de 2023",
+      "numeroJugadores": "1 jugador",
+      "clasificacion": "Todos",
+      "modosCompatibles": "televisor- portatil",
+      "idiomasCompatibles": "español, ingles, japones",
+      "descripcionCorta": "Mario, Bowser y Peach unen fuerzas para reparar la Vía Estelar, un camino que cumple deseos, en este ameno juego de rol",
+      "id": 5
     }
   ],
   "usuarios": [

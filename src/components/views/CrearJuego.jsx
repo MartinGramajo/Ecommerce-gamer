@@ -151,28 +151,6 @@ const CrearJuego = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label className="h3">Descripción corta*</Form.Label>
-          <Form.Control
-            as="textarea"
-            type="text"
-            placeholder="Ingresar una descripción breve del juego"
-            {...register("descripcionCorta", {
-              required: "Este dato es obligatorio",
-              minLength: {
-                value: 4,
-                message: "Debe ingresar como minimo 4 caracteres",
-              },
-              maxLength: {
-                value: 100,
-                message: "Debe ingresar como maximo 100 caracteres",
-              },
-            })}
-          />
-          <Form.Text className="text-danger">
-            {errors.descripcionCorta?.message}
-          </Form.Text>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formPrecio">
           <Form.Label className="h3">Fecha de lanzamiento*</Form.Label>
           <Form.Control
             type="text"
@@ -202,12 +180,8 @@ const CrearJuego = () => {
             {...register("numeroJugadores", {
               required: "Este dato es obligatorio",
               minLength: {
-                value: 1,
-                message: "Debe ingresar como minimo 1 caracteres",
-              },
-              maxLength: {
-                value: 20,
-                message: "Debe ingresar como maximo 20 caracteres",
+                value: 5,
+                message: "Debe ingresar como minimo 5 caracteres",
               },
             })}
           />
@@ -242,10 +216,6 @@ const CrearJuego = () => {
                   value: 10,
                   message: "Debe ingresar como minimo 10 caracteres",
                 },
-                maxLength: {
-                  value: 100,
-                  message: "Debe ingresar como maximo 100 caracteres",
-                },
               })}
             />
             <Form.Text className="text-danger">
@@ -262,10 +232,6 @@ const CrearJuego = () => {
                 minLength: {
                   value: 2,
                   message: "Debe ingresar como minimo 2 caracteres",
-                },
-                maxLength: {
-                  value: 100,
-                  message: "Debe ingresar como maximo 100 caracteres",
                 },
               })}
             />
