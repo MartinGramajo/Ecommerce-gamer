@@ -24,10 +24,8 @@ const ItemJuego = ({
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        //realizar la consulta a la api
         borrarJuego(id).then((respuesta) => {
           if (respuesta.status === 200) {
-            //actualizar el state productos o la tabla
             listarJuego().then((respuesta) => {
               console.log(respuesta);
               setJuegos(respuesta);
