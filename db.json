@@ -58,6 +58,33 @@
       "modosCompatibles": "Modo Televisor",
       "idiomasCompatibles": "Español",
       "id": 4
+    },
+    {
+      "nombreJuego": "Super Mario RPG™",
+      "precio": "11500",
+      "categoria": "Juego de rol Aventura",
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000068683/fe4afe940b0e707798332e86f0af56cdbde48da59dc37cdfb8d59febb88ac72a",
+      "descripcion": "Mario, Bowser y Peach unen fuerzas para reparar la Vía Estelar, un camino que cumple deseos, en este ameno juego de rol\nForma equipo con un grupo inusual de héroes para reparar la Vía Estelar y detener a la revoltosa Banda de Fraguo. Este colorido juego de rol incluye gráficos y escenas cinemáticas actualizados que refuerzan el encanto de la alianza inesperada entre Mario, Bowser y Peach con Mallow y Geno, el par de personajes originales de este juego. Descubre o regresa a este mundo de aliados inusuales y personajes extravagantes en un juego de rol para todos.\n\n¡Recorre un mundo colorido y añade un toque extra a tus ataques durante los combates!",
+      "lanzamiento": "17 de noviembre de 2023",
+      "numeroJugadores": "1 jugador",
+      "clasificacion": "Todos",
+      "modosCompatibles": "televisor- portatil",
+      "idiomasCompatibles": "español, ingles, japones",
+      "descripcionCorta": "Mario, Bowser y Peach unen fuerzas para reparar la Vía Estelar, un camino que cumple deseos, en este ameno juego de rol",
+      "id": 5
+    },
+    {
+      "nombreJuego": "Super Mario Bros.™ Wonder",
+      "precio": "11500",
+      "categoria": " Plataformas Acción",
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/software/switch/70010000068688/a13441a9532b1c9e90f657ee1c67255de073707543ff6735ceb57b472faec691",
+      "descripcion": "Encuentra maravillas en la siguiente evolución de las aventuras de Mario\nEl estilo de juego clásico de desplazamiento lateral de los juegos de Mario será toda una locura con la adición de la Flor Maravilla. Estos revolucionarios objetos activarán espectaculares momentos que tendrás que ver para creer. Mira cómo las tuberías cobran vida, crea caos como una enorme bola con picos y sé testigo de más eventos inesperados y maravillosos.\n\nElige entre heroicos personajes de Super Mario™ y mejoras\n\nElige entre personajes conocidos como Mario, Luigi, Peach, Daisy, Yoshi y Toad. ¡Utiliza una nueva transformación y conviértete en Mario Elefante para usar tu trompa y derrotar enemigos de manera inesperada!\n\nComparte las maravillas con tus amigos y con seguidores de Mario\n\nForma equipo con hasta tres amigos en el modo local* y reúnanse alrededor de una consola Nintendo Switch™ para experimentar juntos efectos maravillosos mientras completan niveles y se ayudan entre sí en su camino hacia la meta.",
+      "lanzamiento": "20 de octubre de 2023",
+      "numeroJugadores": " Una sola consola (1-4)",
+      "clasificacion": "Todos",
+      "modosCompatibles": " Modo televisor, modo semiportátil, Modo portátil",
+      "idiomasCompatibles": "Español, Francés, Holandés, Inglés, Italiano, Japonés",
+      "id": 6
     }
   ],
   "usuarios": [
