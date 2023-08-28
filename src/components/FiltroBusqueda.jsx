@@ -29,7 +29,6 @@ export default function FiltroBusqueda({ juegos }) {
   return (
     <section className="container">
       <form className="d-flex justify-content-between my-4" id="input-busqueda">
-        {/* <div><Search></Search></div> */}
         <input
           className="w-100"
           type="text"

@@ -96,7 +96,7 @@ const EditarJuego = () => {
           <Form.Label className="h3">Precio*</Form.Label>
           <Form.Control
             type="number"
-            placeholder="Ej: 50"
+            placeholder="Ej: 10000"
             {...register("precio", {
               required: "El precio es un valor requerido",
               min: {
